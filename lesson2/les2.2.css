@@ -1,0 +1,16 @@
+.wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap div{
+    width: 18%;
+    background-color: antiquewhite;
+    margin: 3px;
+}
+.post-card h3{
+    text-align: center;
+}
+.post-card p{
+    text-align: justify;
+    padding: 5px;
+}

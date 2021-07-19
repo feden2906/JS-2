@@ -1,0 +1,18 @@
+.users-box{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+}
+.user-block{
+    padding: 10px;
+}
+.user-block{
+    width: 35%;
+    background-color: beige;
+    border: 1px solid grey;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.user-block h3{
+    font-size: small;
+}
