@@ -34,42 +34,51 @@
 //     return -1;
 // });
 
-
-// - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна.
-// додати в об'єкт функції:
-// -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
-// -- info () - яка виводить всю інформацію про автомобіль
-// -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
-// -- changeYear (newValue) - змінює рік випуску на значення newValue
-// -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-
-class Cars{
-    constructor(model, produser, year, maxSpeed, engine){
-        this.model = model;
-        this.produser = produser;
-        this.year = year;
-        this.maxSpeed = maxSpeed;
-        this.engine = engine;
-}
-    drive(){
-        console.log('Їдемо зі швидкістю', this.maxSpeed, 'на годину');
-    }
-    info(){
-        console.log('Модель', this.model, 'Виробник', this.produser, 'Рік випуску', this.year, 'Максимальна швидкість', this.maxSpeed, 'Обєм двигуна',this.engine);
-    }
-    increaseMaxSpeed(newSpeed){
-
-    }
-
-}
-
-const car = new Cars('S', 'Tesla Ink.', '2012', '262 km/h', '310')
-console.log(car);
-
-car.drive();
-car.info();
-
+// // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна.
+// //додати в об'єкт функції:
+// //-- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
+// //-- info () - яка виводить всю інформацію про автомобіль
+// //-- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+// //-- changeYear (newValue) - змінює рік випуску на значення newValue
+// //-- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
+// //
 //
+//     function car(model, produser, year, maxSpeed, engine){
+//         this.model = model;
+//         this.produser = produser;
+//         this.year = year;
+//         this.maxSpeed = maxSpeed;
+//         this.engine = engine;
+//     }
+//     drive(){
+//         console.log('Їдемо зі швидкістю', this.maxSpeed, 'на годину');
+//     }
+//     info(){
+//         console.log('Модель', this.model, 'Виробник', this.produser, 'Рік випуску', this.year, 'Максимальна швидкість', this.maxSpeed, 'Обєм двигуна', this.engine);
+//     }
+//     // increaseMaxSpeed(newSpeed) {
+//     // }
+//     //
+//     // changeYear(newValue) {
+//     // }
+//
+// const car = new Cars('S', 'Tesla Ink.', '2012', '262 km/h', '310')
+// car.drive();
+// car.info();
+// // car.increaseMaxSpeed();
+// // car.changeYear();
+//
+// let driverP = {
+//     name: 'Петро',
+//     experiance: 17,
+// }
+// function addDriver(driver, experiance, whatToDo){
+//     console.log('Машину доставить', driver);
+//     console.log('Його досвід за кермом', experiance, 'років');
+//     console.log('Машина прибула', whatToDo);
+// }
+// addDriver (driverP.name, driverP.experiance, 'Виходьте');
+
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -- drive () - яка виводить в консоль "їдемо зі швидкістю {максимальна швидкість} на годину"
@@ -77,9 +86,12 @@ car.info();
 // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
-//
-//
-//
+
+
+
+
+
+
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
