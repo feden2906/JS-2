@@ -121,8 +121,38 @@
 // }
 // addDriver (driverP.name, driverP.experiance, 'Виходьте');
 
-
 // -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити 10 попелюшок , покласти їх в масив.
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+class Cinderella{
+constructor(name, age, size){
+    this.name = name
+    this.age = age
+    this.size = size
+}
+    }
+const marina = new Cinderella('Marina', 17, 37);
+const ira = new Cinderella('Ira', 13, 36);
+const mira = new Cinderella('Mira', 14, 36);
+const inna = new Cinderella('Inna', 14, 36);
+const arina = new Cinderella('Arina', 16, 39);
+const maria = new Cinderella('Maria', 16, 38);
+const amina = new Cinderella('Amina', 12, 35);
+const rina = new Cinderella('Rina', 13, 35);
+const amira = new Cinderella('Amira', 15, 36);
+const marianna = new Cinderella('Marianna', 15, 37);
+
+let cinderellas = []
+cinderellas.push(marina, ira, mira, inna, arina, maria, amina, rina, amira, marianna);
+console.log(cinderellas);
+
+class Prince{
+    constructor(name, age, shoe) {
+        this.name = name
+        this.age = age
+        this.shoe = shoe
+    }
+}
+const peter = new Prince('Peter', 19, 39);

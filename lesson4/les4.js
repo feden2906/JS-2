@@ -1,10 +1,10 @@
 // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
-let mass = []
-for (const mas of mass) {
-    function randomMass (){
-        Math.round(Math.random()*100));
-}
 
+for (let i = 0; i < 10; i++) {
+    function randomMass (){
+        Math.round(Math.random()*100)
+}
+console.log(i);
 }
 
 
