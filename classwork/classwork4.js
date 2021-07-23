@@ -158,23 +158,23 @@ console.log(peter);
 
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 
-cinderellas.forEach(){
-    if(size === 39) {
-        return;
-    }
-    console.log()
-}
+// cinderellas.forEach(){
+//     if(size === 39) {
+//         return;
+//     }
+//     console.log()
+// }
 
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
-let number = cinderellas.find(function (shoe){
-    return this.shoe === 39;
+let number = cinderellas.find(function (cinderellas){
+    return cinderellas.size === peter.shoe;
 })
-console.log(number); //що тут вписати аби показало в консолі?
+console.log(number);
 
 function findShoe (name, shoe, whatToDo){
     console.log('Імя власниці', name)
     console.log('Роззмір туфельки', shoe)
     console.log('Створити пару?', whatToDo)
 }
-findShoe('Імя власниці', name)
+findShoe('Arina', 39, 'yes')
