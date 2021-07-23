@@ -159,10 +159,12 @@ console.log(peter);
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 
 cinderellas.forEach(){
-    if(cinderellas.size == 39) {
+    if(this.size === 39) {
         return;
     }
     console.log()
 }
 
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+let strings = cinderellas.find(function ())
