@@ -5,20 +5,19 @@
 // native();
 
 // // - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
-// function minMax (10, 18, 33){
-//     let max = arguments[0];
-//     let min = arguments[0];
-//     for (i = 0, i = arguments.length, i++){
-//         if (arguments[i] > max){
-//             max = arguments[i];
-//         }
-//         if (arguments[i] < min){
-//             miv = arguments[i];
-//         }
-//     }
-//     console.log(min);
-// }
-// console.log(minMax(10, 18, 33))
+
+function minMax (10, 18, 33){
+        let min = arguments[0];
+    for (i = 0, i = arguments.length, i++){
+        if (arguments[i] < min){
+            min = arguments[i];
+        }
+     }
+    return min;
+    }
+    console.log(min);
+
+console.log(minMax(10, 18, 33))
 
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
 
@@ -29,7 +28,6 @@
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-
 // - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
 //     Для виведення використати попередню функцію.
