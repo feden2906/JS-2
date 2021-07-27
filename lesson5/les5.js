@@ -10,10 +10,13 @@
 // let elementById = document.getElementById('rules')
 // console.log(elementById);
 
-// -- замініть текст параграфа з id 'content' на будь-який інший
-document.getElementById('content')
+// // -- замініть текст параграфа з id 'content' на будь-який інший
+// let elementById = document.getElementById('content')
+// elementById.innerHTML = '<div>Вітаю в Нарнії</div>'
 
-// -- замініть текст параграфа з id 'rules' на будь-який інший
+// // -- замініть текст параграфа з id 'rules' на будь-який інший
+// let elementById = document.getElementById('rules')
+// elementById.innerHTML = '<div>Тайлер потужний тіп</div>'
 
 // -- змініть кожному елементу колір фону на червоний
 
