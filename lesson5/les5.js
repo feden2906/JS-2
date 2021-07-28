@@ -32,12 +32,23 @@
 //     li.style.backgroundColor = 'red';
 // }
 
-// -- змініть кожному елементу колір тексту на синій
-let elementByIdText = document.getElementById('content');
-// elementByIdText.innerHTML = '<h1>Добро пожаловать в БК</h1>'
-elementByIdText.style.color = 'blue';
+// // -- змініть кожному елементу колір тексту на синій
+// let elementByIdText = document.getElementById('content');
+// elementByIdText.innerHTML = '<h1>Добро пожаловать в БК</h1>';
+// elementByIdText.style.color = 'blue';
+//
+// let elementByIdRules = document.getElementById('rules');
+// elementByIdRules.style.color = 'blue';
+//
+// let elementsByTagNameLi = document.getElementsByTagName('li');
+// for (const li of elementsByTagNameLi) {
+//     li.style.color = 'blue';
+// }
 
-// -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+// // -- отримати весь список класів елемента з id=rules і вивести їх в console.log
+// let elementByIdRules = document.getElementById('rules');
+// elementByIdRules.classList;
+// console.log(elementByIdRules.classList);
 
 // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь
 
