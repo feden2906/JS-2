@@ -20,7 +20,7 @@
 // console.log(minMax(10, 18, 33))
 
 // // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-// function minMax (10, 18, 33){
+// function minMax (){
 //     let max = arguments[0];
 //     for (i = 0; i = arguments.length; i++){
 //         if (arguments[i] >= max){
