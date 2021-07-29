@@ -1,18 +1,42 @@
 // Взяти файл template_2.html та працювати в ньому
 // 1) Напишіть код, який :
-// a) змінює колір тексту елемнту з ід main_header на назву групи в якій ви вчитесь (mon-year)
+// a) змінює колір тексту елемнту з ід main_header на
+// // назву групи в якій ви вчитесь (mon-year)
+//
+// let elementByIdHeader = document.getElementById('main_header');
+// elementByIdHeader.innerHTML = '<h1>june-2021</h1>';
+// elementByIdHeader.style.color = 'blue';
 
-// b) робить шириниу елементу ul 400px
+// // b) робить шириниу елементу ul 400px
+// let elementsByTagNameLi = document.getElementsByTagName('ul');
+// for (const ul of elementsByTagNameLi) {
+//  ul.style.width = '400px';
+//  ul.style.padding = '0';
+// }
 
-// c) робить шириниу всіх елементів з класом linkList шириною 50%
+// // c) робить шириниу всіх елементів з класом linkList шириною 50%
+// let elementsByClassNameLinkList = document.getElementsByClassName('linkList');
+// for (const linkList of elementsByClassNameLinkList) {
+//     linkList.style.width = '50%';
+// }
 
-// d) отримує текст який зберігається в елементі з класом listElement2
+// // d) отримує текст який зберігається в елементі з класом listElement2
+// let elementsByClassNameListElement2 = document.getElementsByClassName('listElement2');
+// console.log(elementsByClassNameListElement2);
 
-// e) отримує всі елементи li та змінює ім колір фону на сірий
+// // e) отримує всі елементи li та змінює ім колір фону на сірий
+// let elementsByTagNameLi = document.getElementsByTagName('li');
+// for (const li of elementsByTagNameLi) {
+//     li.style.backgroundColor = 'silver';
+// }
 
 // f) отримує всі елементи 'a' та додає їм клас anchor
+let elementsByTagNameA = document.getElementsByTagName('a');
+elementsByTagNameA.classList.add('anchor');
+console.log(elementsByTagNameA);
 
 // g) отримує всі елементи 'a' та у випадку, якщо текстовий контен елементу дорівнює link3, змінює йому розмір тексту на 40 пікселів
+
 
 // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
 
