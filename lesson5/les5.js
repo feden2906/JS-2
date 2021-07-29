@@ -50,6 +50,25 @@
 // elementByIdRules.classList;
 // console.log(elementByIdRules.classList);
 
-// -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна вивдоить текст елементу, інша довільний ьексь
+// // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік",
+// // одна вивдоить текст елементу,
+// // інша довільний текст
+// let elementsByTagNameLi = document.getElementsByTagName('li');
+//
+// for (const li of elementsByTagNameLi) {
+//     li.addEventListener('click', () => {
+//         console.log(li.innerText)
+//     })
+//     li.addEventListener('click', () => {
+//         console.log('jjjjjjjjjjjjjjjjj')
+//     })
+//
+// }
 
-// -- поміняти колір тексту у всіх елементів fc_rules на червоний
+
+// // -- поміняти колір тексту у всіх елементів fc_rules на червоний
+// let elementsByClassNameRedText = document.getElementsByClassName('fc_rules');
+//
+// for (const li of elementsByClassNameRedText) {
+//  li.style.color = 'red';
+// }
