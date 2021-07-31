@@ -74,6 +74,14 @@
 //     elementsByClassNameComtentElement.innerText = prompt()
 // }
 
-// l) отримати елементи p та змінити їм padding на 20px
+// // l) отримати елементи p та змінити їм padding на 20px
+// let elementsByTagNameP = document.getElementsByTagName('p');
+// for (const elementsByTagNamePElement of elementsByTagNameP) {
+//     elementsByTagNamePElement.style.padding = '20px'
+// }
 
-// m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year)
+// // m) отримати елементи з класом text2 та змінити їм текст на назву групи (mon-year)
+// let elementsByClassNameT = document.getElementsByClassName('text2');
+// for (const elementsByClassNameTElement of elementsByClassNameT) {
+//     elementsByClassNameTElement.innerText = 'june - 2021';
+// }
