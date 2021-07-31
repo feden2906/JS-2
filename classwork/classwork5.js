@@ -47,23 +47,32 @@
 //     console.log(itemA.innerText);
 // }
 
-// h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
-let elementsByTagNameA= document.getElementsByTagName('a');
-for (const elementA of elementsByTagNameA) {
-    elementA.classList.add('element_');
-    console.log(elementA);
-}
+// // h) отримує всі елементи 'a' та додає їм клас element_XXX. Де XXX - текстовий контент елементу a
+// let elementsByTagNameA= document.getElementsByTagName('a');
+// for (const elementA of elementsByTagNameA) {
+//     elementA.classList.add(`element_${elementA.innerText}`);
+//     console.log(elementA);
+// }
 
+// // i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
+// let classNameSubHeader = document.getElementsByClassName('sub-header');
+// for (const classNameSubHeaderElement of classNameSubHeader) {
+//     classNameSubHeaderElement.style.backgroundColor = prompt()
+// }
 
-// i) отримує всі елементи 'sub-header' та змінює колір фону. Фон отримати з prompt()
-let classNameSubHeader = document.getElementsByClassName('sub-header');
-for (const classNameSubHeaderElement of classNameSubHeader) {
-    classNameSubHeaderElement.style.backgroundColor = prompt()
-}
+// // j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
+// let elementsByClassNameSub = document.getElementsByClassName('sub-header');
+// for (const sub of elementsByClassNameSub) {
+//     if (sub.innerText === 'content 2 segment'){
+// sub.style.color = prompt()
+//     }
+// }
 
-// j) отримує всі елементи 'sub-header' та змінює колір тексту у видаку якщо текст елемнту = content 2 segment . Колір отримати з prompt()
-
-// k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+// // k) отримує елемент з класом content_1 та заміняє  в ньому тест на довільний. Текст отримати з prompt()
+// let elementsByClassNameComtent = document.getElementsByClassName('content_1');
+// for (const elementsByClassNameComtentElement of elementsByClassNameComtent) {
+//     elementsByClassNameComtentElement.innerText = prompt()
+// }
 
 // l) отримати елементи p та змінити їм padding на 20px
 
