@@ -4,11 +4,11 @@
 
 // // -- отримує текст з параграфа з id "content"
 // let elementById = document.getElementById('content')
-// console.log(elementById);
+// console.log(elementById.innerText);
 
 // // -- отримує текст з блоку з id "rules"
-// let elementById = document.getElementById('rules')
-// console.log(elementById);
+// let elementByIdR = document.getElementById('rules')
+// console.log(elementByIdR.innerText);
 
 // // -- замініть текст параграфа з id 'content' на будь-який інший
 // let elementById = document.getElementById('content')
