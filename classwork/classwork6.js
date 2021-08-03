@@ -13,7 +13,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             let detailsBtn = document.createElement('button');
             detailsBtn.innerText = 'details';
             detailsBtn.onclick = function (){
-                console.log('print post of users', user.id);
+                // console.log('print post of users', user.id);
                 fetch(`https://jsonplaceholder.typicode.com/users/${users.id}/posts`)
                     .then (value => value.json())
                     .then (value => {
