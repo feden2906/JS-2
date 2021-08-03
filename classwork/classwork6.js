@@ -9,23 +9,26 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         let usersBox = document.getElementsByClassName('users-box')[0];
         for (const user of users) {
             let pUser = document.createElement('p');
-            pUser.innerText = `${user.id} - ${user.title}`;
             let detailsBtn = document.createElement('button');
+            pUser.innerText = `${user.id} - ${user.title}`;
             detailsBtn.innerText = 'details';
             detailsBtn.onclick = function (){
                 // console.log('print post of users', user.id);
-                fetch(`https://jsonplaceholder.typicode.com/users/${users.id}/posts`)
+                fetch(`https://jsonplaceholder.typicode.com/users/${users.id}/comments`)
                     .then (value => value.json())
                     .then (value => {
                        let postsBox = document.getElementsByClassName('post-box')[0];
-                        for (const post of value) {
+                       postsBox.innerText = '';
+                       for (const post of value) {
+                           console.log(post)
                             let liPost = document.createElement('li');
-                            liPost.innerText = `${post}`;
-                            postsBox.append(liPost);
+                            liPost.innerText = `${post.name}`;
+                            postsBox.appendChild(liPost);
                         }
+                       pUser.appendChild(postsBox);
                     })
             }
             pUser.appendChild(detailsBtn);
-            usersBox.append(pUser);
+            usersBox.appendChild(pUser);
         }
     })
