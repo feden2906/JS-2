@@ -13,7 +13,6 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             pUser.innerText = `${user.id} - ${user.title}`;
             detailsBtn.innerText = 'details';
             detailsBtn.onclick = function (){
-                // console.log('print post of users', user.id);
                 fetch(`https://jsonplaceholder.typicode.com/users/${users.id}/comments`)
                     .then (value => value.json())
                     .then (value => {
