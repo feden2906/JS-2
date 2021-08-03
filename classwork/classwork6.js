@@ -5,7 +5,7 @@
 //    поточного поста
 fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
-    .then(users => {console.log(users)
+    .then(users => {
         let usersBox = document.getElementsByClassName('users-box')[0];
         for (const user of users) {
             let pUser = document.createElement('p');
@@ -17,7 +17,12 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                 fetch(`https://jsonplaceholder.typicode.com/users/${users.id}/posts`)
                     .then (value => value.json())
                     .then (value => {
-                        console.log(value);
+                       let postsBox = document.getElementsByClassName('post-box')[0];
+                        for (const post of value) {
+                            let liPost = document.createElement('li');
+                            liPost.innerText = `${post}`;
+                            postsBox.append(liPost);
+                        }
                     })
             }
             pUser.appendChild(detailsBtn);
