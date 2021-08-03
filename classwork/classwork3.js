@@ -34,13 +34,24 @@
 // console.log(minMax(10, 18, 33))
 
 // // - створити функцію яка повертає найбільше число з масиву
-// let numbers = function (i) {return (let i = 0, i < numbers.length, i++)};
+let mass = []
+function (){
+    for (const mas of mass) {
+
+    }
+}
 
 // // - створити функцію яка повертає найменьше число з масиву
 // let numbers = function (i) {return (let i = 0, i > numbers.length, i++)};
 
-// // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-// let numbers = function (a,b) {return (a + b)};
+// - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+let numbers = function (a,b) {return (a + b)};
+function sum(){
+    for (const argument of arguments) {
+        let i = 0
+        i++
+    }
+}
 
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
 // let numbers = function (a,b) {return (a + b) / numbers.length};
@@ -48,12 +59,16 @@
 // // - створити функцію яка заповнює масив рандомними числами
 // // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
 // //     Для виведення використати попередню функцію.
-// for (let i = 0; i < 100; i++) {
-//     function randomMass (){
-//         return Math.round(Math.random(i)*100)
-//     }
-//     console.log(Math.round);
-// }
+    function randomMass () {
+        let arr = [];
+        for (let i = 0; i < 100; i++) {
+            arr.push(Math.round(Math.random() * 100));
+        }
+        return arr;
+    }
+
+    let result = randomMass();
+    console.log(result);
 
 // - Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 // EXAMPLE:
