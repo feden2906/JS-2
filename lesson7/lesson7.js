@@ -9,28 +9,29 @@
 
 //1
 function wakeUp(time) {
-    return new Promise( (resolve, reject) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
-            console.log('потрібно прокинутись');
+            console.log('новий день');
             if (time < '7-00') {
                 console.log('спи');
-                reject ('ще 5 хв');
-            } else {
-                console.log('прокидайся')
-                resolve ('час вставати');
+                reject('ще 5 хв');
             }
+            console.log('прокидайся')
+            resolve('час вставати');
         }, 300)
     })
 }
-function getUp(){
+
+function getUp() {
     return new Promise((resolve, reject) => {
-        setTimeout(() =>{
+        setTimeout(() => {
             console.log('вставай з ліжка')
             resolve('застели постіль')
         }, 111)
     })
 }
-function washFace (time) {
+
+function washFace(time) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('вмивайся');
@@ -38,6 +39,7 @@ function washFace (time) {
         }, 100)
     })
 }
+
 function getDressed() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -46,98 +48,120 @@ function getDressed() {
         }, 116)
     })
 }
-function breakfast (money){
+
+function breakfast(money) {
     return new Promise((resolve, result) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('Ваше замовлення')
             console.log('англійський сніданок')
             resolve('смачного')
-        },1000);
+        }, 1000);
     })
 }
-function pay(money){
-    return new Promise((resolve, reject) =>{
-      setTimeout(() =>{
-          console.log('ваш рахунок')
-          resolve('оплатити рахунок')
-      }, 540)
-    })
-}
-function manicure(money){
+
+function pay(money) {
     return new Promise((resolve, reject) => {
-        setTimeout(()=> {
+        setTimeout(() => {
+            console.log('ваш рахунок')
+            resolve('оплатити рахунок')
+        }, 540)
+    })
+}
+
+function manicure(money) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
             console.log('Зробити манікюр')
             resolve('ваш майстер Аліна')
         }, 1400);
     })
 }
-function goToWork (money){
+
+function goToWork(money) {
     return new Promise((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('Добратись на роботу')
             resolve('біжи на автобус')
         }, 3000);
     })
 }
-function coffe(money){
+
+function coffe(money) {
     return new Promise((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
+            console.log('яку каву будете?')
+            if (money < 50) {
+                console.log('американо')
+                reject('мало грошей')
+            }
             console.log('купити каву')
-            resolve('американо')
+            resolve('айс лате')
         }, 700);
     })
 }
-function talkToFriend(time){
+
+function talkToFriend(time) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('Поговорити з подругою')
             resolve('розказати новини')
         }, 1500);
     }))
 }
-function chat(time){
+
+function chat(time) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('відписатись в чатіку')
             resolve('мемасікі вогонь')
         }, 360);
     }))
 }
- function goToGym(time){
+
+function goToGym(time) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
-        console.log('Сходити на треню')
+        setTimeout(() => {
+            console.log('Сходити на треню')
             resolve('відпрацювати кроваві техніки')
-    }, 2200);
+        }, 2200);
     }))
- }
- function readTheBook(time){
+}
+
+function readTheBook(time) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('Читати книгу')
             resolve('записати круті думки')
         }, 860);
     }))
- }
-function bujet(money){
+}
+
+function bujet(money) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('Розпланувати бюджет')
             resolve('запланувати покупку')
         }, 1150);
     }))
 }
-function byDress(money){
+
+function byDress(money) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
-            console.log('Обрати плаття')
-            resolve('купити найкрасивіше')
+        setTimeout(() => {
+            console.log('пошук ідеального плаття')
+            if(money < 400){
+                console.log('на жаль, у нас немає нічого за вашу суму')
+                reject('мало грошей')
+            }
+            console.log('чим можу вам допомогти?')
+            resolve('опкажіть найкрасивіше плаття')
         }, 890);
     }))
 }
-function lanch(money){
+
+function lanch(money) {
     return new Promise(((resolve, reject) => {
-        setTimeout(()=>{
+        setTimeout(() => {
             console.log('Пообідати')
             resolve('комплексний обід')
         }, 1250);
@@ -145,18 +169,18 @@ function lanch(money){
 }
 
 wakeUp('7-00')
-    .then((value) =>{
+    .then((value) => {
         console.log(value);
         return getUp();
     })
-    .then((value) =>{
+    .then((value) => {
         console.log(value);
         return washFace();
     })
-    .then((value) =>{
+    .then((value) => {
         console.log(value);
         return getDressed();
-        })
+    })
     .then((value) => {
         console.log(value);
         return breakfast();
@@ -175,7 +199,7 @@ wakeUp('7-00')
     })
     .then((value) => {
         console.log(value);
-        return coffe();
+        return coffe(50);
     })
     .then((value) => {
         console.log(value);
@@ -193,19 +217,19 @@ wakeUp('7-00')
         console.log(value);
         return readTheBook();
     })
-    .then((value) =>{
+    .then((value) => {
         console.log(value);
         return bujet();
     })
-    .then((value) =>{
+    .then((value) => {
         console.log(value);
-        return byDress();
+        return byDress(350);
     })
-    .then((value) =>{
+    .then((value) => {
         console.log(value);
         return lanch();
     })
-    .catch(reason =>{
+    .catch(reason => {
         console.log('*** ERROR ****')
         console.log(reason)
         console.log('**** ERROR ****')
