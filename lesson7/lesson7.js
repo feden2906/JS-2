@@ -62,17 +62,34 @@ console.log(washFace)
     }
 })
 
-// function breakfast (money, cb){
-//     setTimeout(()=>{
-//         console.log('Ваше замовлення')
-//         if(money < 50){
-//             console.log('яєшня')
-//         } else{
-//             console.log('англійський сніданок')
-//         }
-//         },1000);
-// }
-// breakfast(250)
+
+
+function breakfast (money, cb){
+    setTimeout(()=>{
+        console.log('Ваше замовлення')
+        if(money < 50){
+            console.log('яєшня', null)
+            cb('вам вистачить лише на')
+        } else{
+            console.log('англійський сніданок')
+            cb (null, 'смачного')
+        }
+        },1000);
+}
+
+function enjoy(){
+    setTimeout(() => {
+        console.log('смачного')
+    }, 230)
+}
+breakfast(100, (err, breakfast) => {
+    if (err){
+        console.log(err)
+    } else {
+        enjoy()
+        console.log(breakfast)
+    }
+})
 
 
 // function manicure(money, cb){
