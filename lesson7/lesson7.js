@@ -122,6 +122,7 @@ manicure(475, (err, manicure) => {
 })
 
 //5
+
 function goToWork (money, cb){
     setTimeout(()=>{
         console.log('Добратись на роботу')
