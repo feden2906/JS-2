@@ -24,15 +24,43 @@ function getUp(){
         console.log('вставай з ліжка')
     }, 111)
 }
-
-wakeUp('5-59', (err, wakeUp) => {
+wakeUp('7-00', (err, wakeUp) => {
     if(err){
         console.error(err)
-    } else
+    } else{
         getUp();
-    console.log(wakeUp)
+        console.log(wakeUp)
+    }
 });
 
+
+
+function washFace (time, cb){
+    setTimeout(() => {
+        console.log('вмивайся');
+        if (time < '7-15'){
+            console.log('іди в ванну', null)
+            cb('повзи давай')
+        } else {
+            console.log('чисть зуби')
+            cb(null, 'воду закрий')
+        }
+    }, 100)
+}
+function getDressed() {
+    setTimeout(() => {
+        console.log('одягайся')
+    }, 116)
+}
+
+washFace('7-25', (err, washFace) => {
+    if(err){
+        console.error(err)
+    } else {
+getDressed();
+console.log(washFace)
+    }
+})
 
 // function breakfast (money, cb){
 //     setTimeout(()=>{
