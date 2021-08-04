@@ -7,6 +7,7 @@
 // Затримка має бути НЕ в порядку зростання, а будь яка.
 // При тому ваші дії мають бути синхронізовані.
 
+//1
 function wakeUp(time, cb) {
     setTimeout(() => {
         console.log('потрібно прокинутись');
@@ -35,6 +36,7 @@ wakeUp('7-00', (err, wakeUp) => {
 
 
 
+//2
 function washFace (time, cb){
     setTimeout(() => {
         console.log('вмивайся');
@@ -63,7 +65,7 @@ console.log(washFace)
 })
 
 
-
+//3
 function breakfast (money, cb){
     setTimeout(()=>{
         console.log('Ваше замовлення')
@@ -92,30 +94,59 @@ breakfast(100, (err, breakfast) => {
 })
 
 
-// function manicure(money, cb){
-//     setTimeout(()=> {
-//         console.log('Зробити манікюр')
-//         if(money < 450){
-//             console.log('гігієнічний')
-//         } else {
-//             console.log('комбінований')
-//         }
-//     }, 1400);
-// }
-// manicure(475)
+//4
+function manicure(money, cb){
+    setTimeout(()=> {
+        console.log('Зробити манікюр')
+        if(money < 450){
+            console.log('маленький бюджет', null)
+            cb('можемо запропонувати гігієнічний')
+        } else {
+            console.log('комбінований')
+            cb(null, 'ваш майстер')
+        }
+    }, 1400);
+}
+function nailMaster(){
+    setTimeout(() =>{
+        console.log('Аліна')
+    }, 150)
+}
+manicure(475, (err, manicure) => {
+    if(err){
+        console.error(err)
+    } else {
+        nailMaster()
+        console.log(manicure)
+    }
+})
 
-
-// function goToWork (money, cb){
-//     setTimeout(()=>{
-//         console.log('Добратись на роботу')
-//         if(money > 75){
-//             console.log('на таксі')
-//         } else {
-//             console.log('на автобусі')
-//         }
-//     }, 3000);
-// }
-// goToWork(35)
+//5
+function goToWork (money, cb){
+    setTimeout(()=>{
+        console.log('Добратись на роботу')
+        if(money < 75){
+            console.log('на автобусі', null)
+            cb('купуй квиток')
+        } else {
+            console.log('на таксі')
+            cb(null, 'сьогодні лухарі')
+        }
+    }, 3000);
+}
+function onTaxy(){
+    setTimeout(() => {
+        console.log('їдь на таксі')
+    }, 200)
+}
+goToWork(100, (err, goToWork)=>{
+    if (err){
+        console.error(err)
+    } else {
+        onTaxy();
+        console.log(goToWork)
+    }
+})
 
 
 // function coffe(money, cb){
