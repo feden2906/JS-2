@@ -158,51 +158,55 @@ function lanch(money) {
     }))
 }
 
-async function wakeUp(){
-    const wake = await getUp();
-    console.log(wake, 'Підйом');
+async function wakeup(){
+    try {
+        const wake = await getUp();
+        console.log(wake, 'Підйом');
 
-    const wash = await washFace();
-    console.log(wash, 'вмивайся');
+        const wash = await washFace();
+        console.log(wash, 'вмивайся');
 
-    const dressUp = await getDressed();
-    console.log(dressUp, 'одягайся');
+        const dressUp = await getDressed();
+        console.log(dressUp, 'одягайся');
 
-    const eat = await breakfast();
-    console.log(eat, 'їж');
+        const eat = await breakfast();
+        console.log(eat, 'їж');
 
-    const paeCheck = pay();
-    console.log(paeCheck, 'заплати рахунок');
+        const paeCheck = pay();
+        console.log(paeCheck, 'заплати рахунок');
 
-    const nail = await manicure();
-    console.log(nail, 'красивий манікюр');
+        const nail = await manicure();
+        console.log(nail, 'красивий манікюр');
 
-    const work = await goToWork();
-    console.log(work, 'you late');
+        const work = await goToWork();
+        console.log(work, 'you late');
 
-    const getCoffe = await coffe();
-    console.log(getCoffe, 'its hot');
+        const getCoffe = await coffe();
+        console.log(getCoffe, 'its hot');
 
-    const friends = await talkToFriend();
-    console.log(friends, 'nice to see you');
+        const friends = await talkToFriend();
+        console.log(friends, 'nice to see you');
 
-    const chating = await chat();
-    console.log(chating, 'lol');
+        const chating = await chat();
+        console.log(chating, 'lol');
 
-    const gym = await goToGym();
-    console.log(gym, 'without stragle there is no progress');
+        const gym = await goToGym();
+        console.log(gym, 'without struggle there is no progress');
 
-    const book = await readTheBook();
-    console.log(book, 'nice book');
+        const book = await readTheBook();
+        console.log(book, 'nice book');
 
-    const money = await bujet();
-    console.log(money, 'were is my money?');
+        const money = await bujet();
+        console.log(money, 'were is my money?');
 
-    const dress = await byDress();
-    console.log(dress, 'can i pay by cash?');
+        const dress = await byDress();
+        console.log(dress, 'can i pay by cash?');
 
-    const eatLanch = await lanch();
-    console.log(eatLanch, 'thanks');
+        const eatLanch = await lanch();
+        console.log(eatLanch, 'thanks');
+
+    } catch (err){
+        console.log(err)
+    }
 }
-wakeUp('7-00');
-coffe(30)
+    wakeup('6-00');
