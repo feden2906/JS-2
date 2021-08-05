@@ -1,4 +1,3 @@
-//1
 function wakeUp(time) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -159,70 +158,51 @@ function lanch(money) {
     }))
 }
 
-wakeUp('7-00')
-    .then((value) => {
-        console.log(value);
-        return getUp();
-    })
-    .then((value) => {
-        console.log(value);
-        return washFace();
-    })
-    .then((value) => {
-        console.log(value);
-        return getDressed();
-    })
-    .then((value) => {
-        console.log(value);
-        return breakfast();
-    })
-    .then((value) => {
-        console.log(value);
-        return pay();
-    })
-    .then((value) => {
-        console.log(value);
-        return manicure();
-    })
-    .then((value) => {
-        console.log(value);
-        return goToWork();
-    })
-    .then((value) => {
-        console.log(value);
-        return coffe(50);
-    })
-    .then((value) => {
-        console.log(value);
-        return talkToFriend();
-    })
-    .then((value) => {
-        console.log(value);
-        return chat();
-    })
-    .then((value) => {
-        console.log(value);
-        return goToGym();
-    })
-    .then((value) => {
-        console.log(value);
-        return readTheBook();
-    })
-    .then((value) => {
-        console.log(value);
-        return bujet();
-    })
-    .then((value) => {
-        console.log(value);
-        return byDress(350);
-    })
-    .then((value) => {
-        console.log(value);
-        return lanch();
-    })
-    .catch(reason => {
-        console.log('*** ERROR ****')
-        console.log(reason)
-        console.log('**** ERROR ****')
-    })
+async function wakeUp(){
+    const wake = await getUp();
+    console.log(wake, 'Підйом');
 
+    const wash = await washFace();
+    console.log(wash, 'вмивайся');
+
+    const dressUp = await getDressed();
+    console.log(dressUp, 'одягайся');
+
+    const eat = await breakfast();
+    console.log(eat, 'їж');
+
+    const paeCheck = pay();
+    console.log(paeCheck, 'заплати рахунок');
+
+    const nail = await manicure();
+    console.log(nail, 'красивий манікюр');
+
+    const work = await goToWork();
+    console.log(work, 'you late');
+
+    const getCoffe = await coffe();
+    console.log(getCoffe, 'its hot');
+
+    const friends = await talkToFriend();
+    console.log(friends, 'nice to see you');
+
+    const chating = await chat();
+    console.log(chating, 'lol');
+
+    const gym = await goToGym();
+    console.log(gym, 'without stragle there is no progress');
+
+    const book = await readTheBook();
+    console.log(book, 'nice book');
+
+    const money = await bujet();
+    console.log(money, 'were is my money?');
+
+    const dress = await byDress();
+    console.log(dress, 'can i pay by cash?');
+
+    const eatLanch = await lanch();
+    console.log(eatLanch, 'thanks');
+}
+wakeUp('7-00');
+coffe(30)
