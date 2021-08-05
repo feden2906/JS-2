@@ -4,7 +4,7 @@ function wakeUp(time) {
             console.log('новий день');
             if (time < '7-00') {
                 console.log('спи');
-                reject('ще 5 хв');
+                return reject('ще 5 хв');
             }
             console.log('прокидайся')
             resolve('час вставати');
@@ -21,7 +21,7 @@ function getUp() {
     })
 }
 
-function washFace(time) {
+function washFace() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('вмивайся');
@@ -39,7 +39,7 @@ function getDressed() {
     })
 }
 
-function breakfast(money) {
+function breakfast() {
     return new Promise((resolve, result) => {
         setTimeout(() => {
             console.log('Ваше замовлення')
@@ -49,7 +49,7 @@ function breakfast(money) {
     })
 }
 
-function pay(money) {
+function pay() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('ваш рахунок')
@@ -58,7 +58,7 @@ function pay(money) {
     })
 }
 
-function manicure(money) {
+function manicure() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('Зробити манікюр')
@@ -67,7 +67,7 @@ function manicure(money) {
     })
 }
 
-function goToWork(money) {
+function goToWork() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             console.log('Добратись на роботу')
@@ -82,7 +82,7 @@ function coffe(money) {
             console.log('яку каву будете?')
             if (money < 50) {
                 console.log('американо')
-                reject('мало грошей')
+                return reject('мало грошей')
             }
             console.log('купити каву')
             resolve('айс лате')
@@ -90,7 +90,7 @@ function coffe(money) {
     })
 }
 
-function talkToFriend(time) {
+function talkToFriend() {
     return new Promise(((resolve, reject) => {
         setTimeout(() => {
             console.log('Поговорити з подругою')
@@ -99,7 +99,7 @@ function talkToFriend(time) {
     }))
 }
 
-function chat(time) {
+function chat() {
     return new Promise(((resolve, reject) => {
         setTimeout(() => {
             console.log('відписатись в чатіку')
@@ -108,7 +108,7 @@ function chat(time) {
     }))
 }
 
-function goToGym(time) {
+function goToGym() {
     return new Promise(((resolve, reject) => {
         setTimeout(() => {
             console.log('Сходити на треню')
@@ -117,7 +117,7 @@ function goToGym(time) {
     }))
 }
 
-function readTheBook(time) {
+function readTheBook() {
     return new Promise(((resolve, reject) => {
         setTimeout(() => {
             console.log('Читати книгу')
@@ -126,7 +126,7 @@ function readTheBook(time) {
     }))
 }
 
-function bujet(money) {
+function bujet() {
     return new Promise(((resolve, reject) => {
         setTimeout(() => {
             console.log('Розпланувати бюджет')
@@ -141,7 +141,7 @@ function byDress(money) {
             console.log('пошук ідеального плаття')
             if(money < 400){
                 console.log('на жаль, у нас немає нічого за вашу суму')
-                reject('мало грошей')
+                return reject('мало грошей')
             }
             console.log('чим можу вам допомогти?')
             resolve('опкажіть найкрасивіше плаття')
@@ -149,7 +149,7 @@ function byDress(money) {
     }))
 }
 
-function lanch(money) {
+function lanch() {
     return new Promise(((resolve, reject) => {
         setTimeout(() => {
             console.log('Пообідати')
@@ -160,8 +160,11 @@ function lanch(money) {
 
 async function wakeup(){
     try {
-        const wake = await getUp();
+        const wake = await wakeUp('7-00');
         console.log(wake, 'Підйом');
+
+        const get = await getUp();
+        console.log(get, 'Підйом');
 
         const wash = await washFace();
         console.log(wash, 'вмивайся');
@@ -172,7 +175,7 @@ async function wakeup(){
         const eat = await breakfast();
         console.log(eat, 'їж');
 
-        const paeCheck = pay();
+        const paeCheck = await pay();
         console.log(paeCheck, 'заплати рахунок');
 
         const nail = await manicure();
@@ -181,7 +184,7 @@ async function wakeup(){
         const work = await goToWork();
         console.log(work, 'you late');
 
-        const getCoffe = await coffe();
+        const getCoffe = await coffe(40);
         console.log(getCoffe, 'its hot');
 
         const friends = await talkToFriend();
@@ -206,7 +209,11 @@ async function wakeup(){
         console.log(eatLanch, 'thanks');
 
     } catch (err){
+        console.log('**** error ****')
         console.log(err)
+        console.log('**** error ****')
+    } finally {
+        console.log('кінець...... цей блок відпрацьовує завжти не залежно від того чи падали проміси чи ні')
     }
 }
-    wakeup('6-00');
+    wakeup();
